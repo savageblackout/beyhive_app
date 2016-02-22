@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'bootstrap', '~> 4.0', '>= 4.0.0.alpha3'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap_form'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use postgresql as the database for Active Record
