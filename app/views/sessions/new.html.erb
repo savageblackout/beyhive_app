@@ -1,14 +1,19 @@
-<h1>Login</h1>
+<img id="login_bey" src="https://i.imgur.com/dRB95G5.jpg">
+<div class="container" id="login_container">
+<h1 class="text-center">Login!</h1>
+
 <p id="alert"><%= alert %></p>
+<div class="col-md-4 col-md-offset-4">
 <%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :email, params[:email] %>
-    </div>
-    <div class="field">
-      <%= label_tag :password %>
-      <%= password_field_tag :password %>
-    </div>
-    <div class="actions"><%= submit_tag "Log In" %></div>
+  <div class="form-group">
+    <%= label_tag :email, "email" %>
+    <input class="form-control" placeholder="email" <%= text_field_tag :email, params[:email] %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :password, "Password" %>
+    <input class="form-control" placeholder="Password" <%= text_field_tag :password %>
+  </div>
+  <div class="actions"><%= submit_tag "Log In!" %></div>
 
 <% end %>
+</div>
