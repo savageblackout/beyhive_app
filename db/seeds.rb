@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.destroy_all
+Post.destroy_all
 
 first_sibling = User.create(
   f_name: "Jennifer",
@@ -26,4 +27,19 @@ third_sibling = User.create(
   l_name: "Landman",
   email: "emily@email.com",
   password: "abc123"
+)
+
+drunk = Post.create(
+  title:"Drunk In Love",
+  embed_url: "p1JPKLa-Ofc",
+)
+
+blow = Post.create(
+  title: "Blow",
+  embed_url: "CIELYkfoKy8"
+)
+
+formation = Post.create(
+  title: "Formation",
+  embed_url: "LrCHz1gwzTo"
 )
