@@ -1,0 +1,55 @@
+
+img {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+#login_bey {
+  background-image: cover;
+}
+#sign_up_container {
+  position: relative;
+  bottom:60rem;
+}
+#login_container {
+  position: relative;
+  bottom: 45rem;
+}
+#container {
+
+}
+#login_signup_links {
+
+}
+@font-face {
+  font-family:'steelfish_rg.ttf';
+  src: font-url('steelfish_rg.ttf');
+  src: font-url('steelfish_rg.ttf') format('truetype');
+}
+
+h1 {
+  font-family: 'steelfish_rg.tff', Helvetica;
+  font-spacing: .3rem;
+  font-size: 5rem;
+}
+.about_img {
+  background-image: url("https://i.imgur.com/MO9oqac.jpg");
+}
+.video_img{
+  background-image: url("https://i.imgur.com/o3YRhnN.jpg");
+}
+.images_img {
+  background-image: url("https://i.imgur.com/hT9gvh5.jpg");
+}
+.text_img {
+  background-image: url("https://i.imgur.com/6bd3vSV.jpg");
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#home_page_imgs {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
