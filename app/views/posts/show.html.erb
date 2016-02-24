@@ -1,0 +1,11 @@
+<h4><%= link_to @post.title, @post.youtube_link %></h4>
+<iframe class="video-embed" src="<%= @post.embed_link %>" frameborder="0"
+  allowfullscreen></iframe>
+<article>
+
+
+
+<ul class="list-unstyled">
+  <ul class="list-unstyled"><%= "Title: #{@post.title}" %></li>
+  <ul class="list-unstyled"><%= "Created on: #{@post.created_on}" %></li>
+</ul>
