@@ -1,8 +1,8 @@
 class Post < ActiveRecord::Base
   belongs_to :user
   has_many :comments
-  validates :embed_url, uniqueness: true, presence: true
-  validates :title, presence: true
+
+  validate :image_or_text_or_video
 
   def youtube_link
     "https://youtu.be/#{self.embed_url}"
@@ -12,20 +12,27 @@ class Post < ActiveRecord::Base
     "https://www.youtube.com/embed/#{self.embed_url}"
   end
 
-  def photo_url
-    "https://www.imgur.com/#{self.photo_url}"
-  end
 
-  def fragment_id
-    "picture-#{self.id}"
-  end
+  # def has_image?
+  #   photo_url && !photo_url.empty?
+  # end
 
-  # require 'date'
+  # def has_text?
+  #   text && !text.empty?
+  # end
 
-  # date_string = '09-02-2012 20:05:33'
+  # def has_video?
+  #   embed_url && !embed_url.empty?
+  # end
 
-  # datetime = DateTime.parse(date_string)
-  # puts datetime
-  # puts DateTime.strptime(date_string, '%m-%d-%Y %H:%M:%S')
+  # def image_or_text_or_video
+  #   if !has_text? && !has_image? && !has_video?
+  #     errors.add :image_or_text_or_video, "must exist."
+  #   end
+  # end
+
+  # def formatted_time
+  #   created_at.strftime("%b %-d, %Y")
+  # end
 
 end

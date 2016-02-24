@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20160223215122) do
     t.integer  "user_id"
     t.string   "title"
     t.text     "text_post"
+    t.string   "photo_url"
     t.string   "embed_url"
     t.datetime "created_on"
     t.integer  "comments_id"

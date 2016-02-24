@@ -1,14 +1,10 @@
-<div class="row text-center">
-  <h1 class="text-center">Video Post Page</h1>
+<div class="row text-center" class="container">
+  <h1 class="text-center">All Posts Page</h1>
     <div class="post_container">
 
     <% @posts.order("created_at desc").each do |post| %>
       <%= post.title %>
-      <iframe class="video-embed" src="<%= post.embed_link %>" frameborder="0"
-      allowfullscreen></iframe>
     <% end %>
-
-
-    </div>
+  </div>
 </div>
 

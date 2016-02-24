@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get "/posts/:id" => "posts#show"
 
+  post "/posts" => "posts#create"
+
 
 
   resources :users, only: [:new, :create, :index]

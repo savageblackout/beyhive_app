@@ -4,32 +4,33 @@
   <div class="col-md-4 col-md-offset-4">
     <%= form_for @post do |f| %>
      <div class="form-group">
-        <%= f.label :title, "title" %>
-        <input class="form-control" placeholder="title" <%=f.text_field :title %>
+        <%= f.label :title, "Title" %>
+        <input class="form-control" placeholder="Title" <%=f.text_field :title %>
       </div>
       <div class="form-group">
         <%= f.label :text_post, "Text Post" %>
-        <input class="form-control" placeholder="Text Post" <%=f.text_field :text_post %>
+        <input class="form-control" id="text_box" placeholder="Text Post" <%=f.text_field :text_post %>
       </div>
       <div class="form-group">
         <%= f.label :embed_url, "YouTube ID" %>
         <input class="form-control" placeholder="Youtube ID" <%=f.text_field :embed_url%>
       </div>
       <div class="form-group">
-        <%= f.label :photo_url, "Photo URL" %>
+         <%= f.label :photo_url, "Photo URL" %>
         <input class="form-control" placeholder="Photo URL" <%=f.text_field :photo_url %>
       </div>
       <div class="actions"><%= f.submit "Submit!" %></div>
   </div>
+   <% end %>
 </div>
-    <% end %>
 
-<% if @user.errors.any? %>
+
+<% if @post.errors.any? %>
     <div class="error_messages">
       <h2>Form is invalid</h2>
       <ul class="list-unstyled">
-        <% for message in @user.errors.full_messages %>
-          <%= message %>
+        <% for message in @post.errors.full_messages %>
+          <li><%= message %></li>
         <% end %>
       </ul>
 <% end %>

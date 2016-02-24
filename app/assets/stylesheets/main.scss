@@ -1,10 +1,24 @@
+@font-face {
+  font-family:'steelfish_rg.ttf';
+  src: font-url('steelfish_rg.ttf');
+  src: font-url('steelfish_rg.ttf') format('truetype');
+}
 
+h1 {
+  font-family: 'steelfish_rg.tff', Helvetica;
+  font-spacing: .3rem;
+  font-size: 5rem;
+}
 img {
   opacity: 0.4;
   filter: alpha(opacity=40);
 }
 #login_bey {
   background-image: cover;
+}
+#text_box {
+  height: 28rem;
+  width: 35rem;
 }
 #sign_up_container {
   position: relative;
@@ -20,17 +34,7 @@ img {
 #login_signup_links {
 
 }
-@font-face {
-  font-family:'steelfish_rg.ttf';
-  src: font-url('steelfish_rg.ttf');
-  src: font-url('steelfish_rg.ttf') format('truetype');
-}
 
-h1 {
-  font-family: 'steelfish_rg.tff', Helvetica;
-  font-spacing: .3rem;
-  font-size: 5rem;
-}
 .about_img {
   background-image: url("https://i.imgur.com/MO9oqac.jpg");
 }

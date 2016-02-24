@@ -43,3 +43,8 @@ formation = Post.create(
   title: "Formation",
   embed_url: "LrCHz1gwzTo"
 )
+
+text1 = Post.create(
+  title: "First Text",
+  text: "I am the first text post."
+)
