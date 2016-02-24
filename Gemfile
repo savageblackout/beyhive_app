@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'dotenv-rails', :groups => [:development, :test]
+
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'bootstrap_form'
 
@@ -30,6 +32,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'gemoji'
 
 gem "paperclip", "~> 4.3"
+
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
