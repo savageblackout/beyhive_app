@@ -1,22 +1,5 @@
-<h4><%= link_to @post.title%></h4>
 
-<ul class="list-unstyled">
-  <li class="list-unstyled"><%= "Title: #{@post.title}" %></li>
-</ul>
-
-<% if @post.has_video? %>
-  <iframe class="video-embed" src="<%= @post.embed_link %>" frameborder="0"
-    allowfullscreen></iframe>
-<% end %>
-
-<% if @post.has_image? %>
-  <img src="<%= @post.photo %>">
-<% end %>
-
-<% if @post.has_text? %>
-  <p><%= @post.text_post %></p>
-<% end %>
-
+<%= render "post", post: @post %>
 
 <%= link_to "Edit post!", edit_post_path(@post), :class => "Edit" %>
 <%= link_to "Back to all posts!", posts_path %>
