@@ -27,7 +27,7 @@ def post_params
     params.require(:post).permit(
       :title,
       :text_post,
-      :photo_url,
+      :photo,
       :embed_url,
       :created_on
     )

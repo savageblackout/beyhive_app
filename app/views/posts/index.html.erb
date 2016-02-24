@@ -4,6 +4,7 @@
 
     <% @posts.order("created_at desc").each do |post| %>
       <%= post.title %>
+      <%= post.photo %>
     <% end %>
   </div>
 </div>
