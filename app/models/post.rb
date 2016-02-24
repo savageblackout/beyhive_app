@@ -16,17 +16,19 @@ class Post < ActiveRecord::Base
   end
 
 
-  # def has_image?
-  #   photo_url && !photo_url.empty?
-  # end
 
-  # def has_text?
-  #   text && !text.empty?
-  # end
 
-  # def has_video?
-  #   embed_url && !embed_url.empty?
-  # end
+  def has_image?
+    self.photo.present?
+  end
+
+  def has_text?
+    self.text_post.present?
+  end
+
+  def has_video?
+    self.embed_url.present?
+  end
 
   # def image_or_text_or_video
   #   if !has_text? && !has_image? && !has_video?
