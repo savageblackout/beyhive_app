@@ -5,7 +5,14 @@
     <% @posts.order("created_at desc").each do |post| %>
       <%= post.title %>
       <%= post.photo %>
+      <div class="post_links">
+        <%= link_to "Show post", post_path(post), :class => "Show" %>
+      </div>
     <% end %>
+      <div class="new_post">
+        <%= link_to "Create a new post!", posts_new_path %>
+      </div>
+
   </div>
 </div>
 
