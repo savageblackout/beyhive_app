@@ -1,7 +1,15 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    if params[:video]
+      @posts = Post.videos
+    elsif params[:photo]
+      @posts = Post.photos
+    elsif params[:text_posts]
+      @posts = Post.text_posts
+    else
+      @posts = Post.all
+    end
   end
 
   def show

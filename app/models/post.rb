@@ -15,8 +15,17 @@ class Post < ActiveRecord::Base
     "https://www.youtube.com/embed/#{self.embed_url}"
   end
 
+  def self.videos
+    self.where "embed_url <> ''"
+  end
 
+  def self.photos
+    self.where "photo_file_name IS NOT NULL"
+  end
 
+  def self.text_posts
+    self.where "text_post <> ''"
+  end
 
   def has_image?
     self.photo.present?
@@ -30,14 +39,8 @@ class Post < ActiveRecord::Base
     self.embed_url.present?
   end
 
-  # def image_or_text_or_video
-  #   if !has_text? && !has_image? && !has_video?
-  #     errors.add :image_or_text_or_video, "must exist."
-  #   end
-  # end
-
-  # def formatted_time
-  #   created_at.strftime("%b %-d, %Y")
-  # end
+  def formatted_time
+    created_at.strftime("%b %-d, %Y")
+  end
 
 end

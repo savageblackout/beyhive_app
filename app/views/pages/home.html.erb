@@ -6,13 +6,13 @@
         </div>
       </div>
       <div class="col-xs-12" class="video_img" class="img-responsive" class="center-block" id="home_page_imgs">
-        <div class="video_box">Video <!--link_to will go here --></div>
+        <div class="video_box"><%= link_to "Video", posts_path(video: true) %></div>
       </div>
       <div class="col-xs-12" class="images_img" class="img-responsive" class="center-block" id="home_page_imgs">
-        <div class="Images_box">Images <!--link_to will go here --></div>
+        <div class="Images_box"><%= link_to "Images", posts_path(photo: true) %></div>
       </div>
       <div class="col-xs-12" class="text_img" class="img-responsive" class="center-block" id="home_page_imgs">
-        <div class="text_box">Text <!--link_to will go here --></div>
+        <div class="text_box"><%= link_to "Text", posts_path(text_posts: true) %></div>
       </div>
       <div class="col-xs-12" class="all_img" class="img-responsive" class="center-block" id="home_page_imgs">
         <div class="video_box"> <%= link_to "All", posts_path %> </div>
