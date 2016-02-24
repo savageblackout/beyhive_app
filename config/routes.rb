@@ -12,6 +12,13 @@ Rails.application.routes.draw do
 
   post "/posts" => "posts#create"
 
+  get "/posts/:id/edit" => "posts#edit", as: :edit_post
+
+  patch "/posts/:id" => "posts#update"
+
+  delete "posts/:id" => "posts#destroy", as: :delete_post
+
+
 
 
   resources :users, only: [:new, :create, :index]

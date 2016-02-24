@@ -7,6 +7,7 @@
       <%= post.photo %>
       <div class="post_links">
         <%= link_to "Show post", post_path(post), :class => "Show" %>
+        <%= link_to "Edit post", edit_post_path(post), :class => "Edit" %>
       </div>
     <% end %>
       <div class="new_post">

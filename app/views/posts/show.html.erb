@@ -3,7 +3,11 @@
 <iframe class="video-embed" src="<%= @post.embed_link %>" frameborder="0"
   allowfullscreen></iframe>
 
+
+
 <ul class="list-unstyled">
-  <ul class="list-unstyled"><%= "Title: #{@post.title}" %></li>
-  <ul class="list-unstyled"><%= "Created on: #{@post.created_on}" %></li>
+  <li class="list-unstyled"><%= "Title: #{@post.title}" %></li>
 </ul>
+<%= link_to "Edit post!", edit_post_path(@post), :class => "Edit" %>
+<%= link_to "Back to all posts!", posts_path %>
+<%= link_to "Delete", post_path, :class => "Delete" %>

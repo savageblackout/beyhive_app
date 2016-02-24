@@ -22,15 +22,33 @@ class PostsController < ApplicationController
       end
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
 
-def post_params
-    params.require(:post).permit(
-      :title,
-      :text_post,
-      :photo,
-      :embed_url,
-      :created_on
-    )
+  def update
+    @post = Post.find(params[:id])
+    if @post.update_attributes(params.require(:post).permit(
+      :title, :text_post, :embed_url, :photo))
+      redirect_to posts_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path
+  end
+
+  def post_params
+      params.require(:post).permit(
+        :title,
+        :text_post,
+        :photo,
+        :embed_url
+      )
   end
 
 

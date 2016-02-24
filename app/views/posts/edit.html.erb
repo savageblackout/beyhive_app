@@ -1,0 +1,27 @@
+<div class="container" id="add_post_container">
+  <h1 class="text-center">Edit your post!</h1>
+
+  <div class="col-md-4 col-md-offset-4">
+    <%= form_for @post, html: { multipart: true } do |f| %>
+     <div class="form-group">
+        <%= f.label :title, "Title" %>
+        <input class="form-control" placeholder="Title" <%=f.text_field :title %>
+      </div>
+      <div class="form-group">
+        <%= f.label :text_post, "Text Post" %>
+        <input class="form-control" id="text_box" placeholder="Text Post" <%=f.text_field :text_post %>
+      </div>
+      <div class="form-group">
+        <%= f.label :embed_url, "YouTube ID" %>
+        <input class="form-control" placeholder="Youtube ID" <%=f.text_field :embed_url%>
+      </div>
+      <div class="form-group">
+         <%= f.label :photo, "Photo File" %>
+        <input class="form-control" placeholder="Photo URL" <%=f.file_field :photo %>
+      </div>
+      <div class="actions"><%= f.submit "Submit changes!" %></div>
+  </div>
+   <% end %>
+   <%= link_to "Back to all posts!", posts_path %>
+   <%= link_to "Back to post", post_path(@post), :class => "Show" %>
+</div>
