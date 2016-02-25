@@ -4,22 +4,11 @@ Rails.application.routes.draw do
 
   get "/about" => "pages#about"
 
-  get "/posts" => "posts#index"
+  resources :posts, except: [:show]
 
-  get "/posts/new" => "posts#new"
-
-  get "/posts/:id" => "posts#show", as: :post
-
-  post "/posts" => "posts#create"
-
-  get "/posts/:id/edit" => "posts#edit", as: :edit_post
-
-  patch "/posts/:id" => "posts#update"
-
-  delete "posts/:id" => "posts#destroy", as: :delete_post
-
-
-
+  resources :posts, only: [:show] do
+    resources :comments, only: [:create, :destroy]
+  end
 
   resources :users, only: [:new, :create, :index]
 

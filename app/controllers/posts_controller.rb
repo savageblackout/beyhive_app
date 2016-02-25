@@ -46,9 +46,13 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy
+    @post = @post.destroy
+
+    flash[:post] = "'#{@post.title}' removed!"
     redirect_to posts_path
   end
+
+private
 
   def post_params
       params.require(:post).permit(
