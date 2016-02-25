@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'puma'
+
 gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'aws-sdk', '<2.0'
@@ -36,6 +38,8 @@ gem "paperclip", "~> 4.3"
 
 gem 'rails_12factor', group: :production
 
+
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -55,4 +59,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+ruby "2.2.3"
 
