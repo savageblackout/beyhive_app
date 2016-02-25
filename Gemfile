@@ -34,7 +34,7 @@ gem 'gemoji'
 
 gem "paperclip", "~> 4.3"
 
-
+gem 'rails_12factor', group: :production
 
 # Use Unicorn as the app server
 # gem 'unicorn'
