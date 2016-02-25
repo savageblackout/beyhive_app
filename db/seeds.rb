@@ -46,5 +46,5 @@ formation = Post.create(
 
 text1 = Post.create(
   title: "First Text",
-  text: "I am the first text post."
+  text_post: "I am the first text post."
 )
