@@ -14,10 +14,12 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.find(params[:id])
   end
 
   def new
     @post = Post.new
+    @comment = Comment.new
   end
 
   def create

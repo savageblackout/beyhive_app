@@ -1,13 +1,18 @@
 <div class="row text-center" class="container">
-  <h1 class="text-center">All Posts Page</h1>
+    <h1 class="text-center">Posts</h1>
+
     <div class="post_container">
 
     <% @posts.order("created_at desc").each do |post| %>
       <%= render "post", post: post %>
 
+
       <div class="post_links">
+        &nbsp;&nbsp;|&nbsp;&nbsp;
         <%= link_to "Show post", post_path(post), :class => "Show" %>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
         <%= link_to "Edit post", edit_post_path(post), :class => "Edit" %>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
       </div>
 
     <% end %>

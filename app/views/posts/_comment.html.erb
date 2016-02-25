@@ -1,5 +1,9 @@
 <div class="add_comment">
   <h4>Add a comment!</h4>
-    <textarea class="form-control" rows="3"></textarea>
-    <button type="submit" class="btn btn-primary">Submit comment!</button>
+
+  <%= form_for [@comment.post, @comment] do |f| %>
+    <textarea class="form-control" rows="3"><%= f.text_field :text %></textarea>
+    <button type="submit" class="btn btn-primary"><%= f.submit "Submit comment!" %></button>
+  <% end %>
 </div>
+
