@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :posts, except: [:show]
 
   resources :posts, only: [:show] do
-    resources :comments, only: [:create, :destroy]
+    resources :comments, only: [:create, :destroy], shallow: true
   end
 
   resources :users, only: [:new, :create, :index]

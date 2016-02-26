@@ -11,15 +11,7 @@ private
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
-  def authorize
+  def authenticate
     redirect_to login_path, alert: "Not authorized - you must be logged in!" if current_user.nil?
   end
-
-
-
-
-
-
-
-
 end

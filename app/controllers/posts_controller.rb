@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  before_action :authenticate, except: [:index, :show]
+  before_action :find_post, only: [:show, :edit, :update, :destroy]
+  before_action :authorize, only: [:edit, :update, :destroy]
 
   def index
     if params[:video]
@@ -13,8 +16,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
-    @comment = Comment.where(post_id: @post.id)
+    @comment = Comment.new
   end
 
   def new
@@ -23,7 +25,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
+
 
     if @post.save
         redirect_to posts_path
@@ -33,11 +36,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
     if @post.update_attributes(params.require(:post).permit(
       :title, :text_post, :embed_url, :photo))
       redirect_to posts_path
@@ -47,7 +48,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     @post = @post.destroy
 
     flash[:post] = "'#{@post.title}' removed!"
@@ -57,13 +57,21 @@ class PostsController < ApplicationController
 private
 
   def post_params
-      params.require(:post).permit(
-        :title,
-        :text_post,
-        :photo,
-        :embed_url
-      )
+    params.require(:post).permit(
+      :title,
+      :text_post,
+      :photo,
+      :embed_url
+    )
   end
 
+  def find_post
+    @post = Post.find(params[:id])
+  end
 
+  def authorize
+    if current_user != @post.user
+      redirect_to post_path(@post), alert: "Not authorized - not your post buddy!"
+    end
+  end
 end

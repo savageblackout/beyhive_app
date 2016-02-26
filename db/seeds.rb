@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.destroy_all
 Post.destroy_all
+Comment.destroy_all
 
 first_sibling = User.create(
   f_name: "Jennifer",

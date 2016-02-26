@@ -1,4 +1,4 @@
-<img id="login_bey" src="https://i.imgur.com/dRB95G5.jpg">
+<img id="login_bey" src="https://i.imgur.com/dRB95G5.jpg" class="img-responsive">
 <div class="container" id="login_container">
 <h1 class="text-center">Login!</h1>
 
@@ -11,7 +11,7 @@
   </div>
   <div class="form-group">
     <%= label_tag :password, "Password" %>
-    <input class="form-control" placeholder="Password" <%= text_field_tag :password %>
+    <input class="form-control" placeholder="Password" <%= password_field_tag :password %>
   </div>
   <div class="actions"><%= submit_tag "Log In!" %></div>
 

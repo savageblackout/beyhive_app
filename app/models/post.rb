@@ -7,6 +7,11 @@ class Post < ActiveRecord::Base
   validates_attachment :photo,
   content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
 
+
+  # def full_name
+  #   self.f_name + ' ' + self.l_name
+  # end
+
   def youtube_link
     "https://youtu.be/#{self.embed_url}"
   end

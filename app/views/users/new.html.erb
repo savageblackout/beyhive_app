@@ -1,4 +1,4 @@
-<img id= "sign_up_image" src="https://i.imgur.com/6xAzS8I.jpg">
+<img id= "sign_up_image" src="https://i.imgur.com/6xAzS8I.jpg" class="img-responsive">
 <div class="container" id="sign_up_container">
   <h1 class="text-center">Sign Up!</h1>
 
@@ -24,7 +24,7 @@
         <%= f.label :password_confirmation, "Password Confirmation" %>
         <input class="form-control" placeholder="Please enter your password again!" <%=f.text_field :password_confirmation %>
       </div>
-       <div class="actions"><%= f.submit "Submit!" %></div>
+       <div class="actions"><%= f.submit "Submit!", {class: "btn btn-primary"} %></div>
   </div>
 </div>
     <% end %>

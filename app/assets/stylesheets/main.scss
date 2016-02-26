@@ -3,18 +3,54 @@
   src: font-url('steelfish_rg.ttf');
   src: font-url('steelfish_rg.ttf') format('truetype');
 }
-
+#container {
+  width: 500px;
+  height: 500px;
+}
+body {
+  background-color: #D7F1F7;
+  color: #262A2B;
+}
 h1 {
   font-family: 'steelfish_rg.tff', Helvetica;
   font-spacing: .3rem;
   font-size: 5rem;
 }
-img {
+#home_page_imgs {
   opacity: 0.4;
   filter: alpha(opacity=40);
 }
+.about_box {
+
+}
+.video_box {
+
+}
+.images_box {
+
+}
+.text_box {
+
+}
+.all_box{
+
+}
+.add_comment {
+  max-width: 500px;
+}
+#about_img {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  background-image: cover;
+}
+.post {
+  display: inline-block;
+}
+
 #login_bey {
   background-image: cover;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
 }
 #text_box {
   height: 28rem;
@@ -24,39 +60,35 @@ img {
   position: relative;
   bottom:60rem;
 }
+#sign_up_image {
+  background-image: cover;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
 #login_container {
   position: relative;
   bottom: 45rem;
 }
-#container {
+.container {
 
 }
 #login_signup_links {
 
 }
 
-.about_img {
-  background-image: url("https://i.imgur.com/MO9oqac.jpg");
-}
-.video_img{
-  background-image: url("https://i.imgur.com/o3YRhnN.jpg");
-}
-.images_img {
-  background-image: url("https://i.imgur.com/hT9gvh5.jpg");
-}
-.text_img {
-  background-image: url("https://i.imgur.com/6bd3vSV.jpg");
-}
 .center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
 #home_page_imgs {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  max-width: 500px;
+  max-height: 300px;
+  position: relative;
+  right: 45px;
 }
-.about_img {
 
-}
