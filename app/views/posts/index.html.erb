@@ -1,6 +1,6 @@
 <div class="row text-center" class="container">
+  <div class="post_container" class="container">
     <h1 class="text-center">Posts</h1>
-    <div class="post_container" class="container">
     <% @posts.order("created_at desc").each do |post| %>
       <%= render "post", post: post %>
       <div class="post_links">
