@@ -27,7 +27,6 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
 
-
     if @post.save
         redirect_to posts_path
       else
@@ -39,8 +38,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post.update_attributes(params.require(:post).permit(
-      :title, :text_post, :embed_url, :photo))
+    if @post.update_attributes(post_params)
       redirect_to posts_path
     else
       render :edit
@@ -56,7 +54,15 @@ class PostsController < ApplicationController
 
 private
 
+  def clean_youtube_url(url)
+    url = url.gsub /https:\/\//, ""
+    url = url.gsub /http:\/\//, ""
+    url = url.gsub /(youtu.be\/|www.youtube.com\/watch\?v=|youtube.com\/watch\?v=)/, ""
+    url = url.gsub /&.*$/, ""
+  end
+
   def post_params
+    params[:post][:embed_url] = clean_youtube_url(params[:post][:embed_url])
     params.require(:post).permit(
       :title,
       :text_post,
