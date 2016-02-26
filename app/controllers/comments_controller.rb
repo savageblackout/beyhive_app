@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :authenticate
 
   def create
     @comment = Comment.new(comment_params)
@@ -14,7 +15,9 @@ class CommentsController < ApplicationController
 
   def destroy
     comment = Comment.find params[:id]
-    comment.destroy
+    if comment.user == current_user
+      comment.destroy
+    end
     redirect_to post_path(comment.post)
   end
 
