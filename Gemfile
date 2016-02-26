@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'puma'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
@@ -36,7 +35,10 @@ gem 'gemoji'
 
 gem "paperclip", "~> 4.3"
 
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'rails_12factor'
+  gem 'thin'
+end
 
 
 
