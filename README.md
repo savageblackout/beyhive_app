@@ -22,12 +22,16 @@ This application allows registered and logged in users to view and share videos,
 In addition, registered and signed in users may edit or delete their posts or comments!
 
 #Where do I use such an amazing application?
-Why, it's as easy as logging on to the World Wide Web, opening your favorite internet browser, and simply pasting this link: 
+Why, it's as easy as logging on to the World Wide Web, opening your favorite internet browser, and simply copying this link--  https://pacific-sea-32437.herokuapp.com/ --
+and pasting it in the address box/location bar/URL bar/address bar of the internet browser!
 
-Or, for those more savvy internet users, simply click on this link.
+Or, for those more savvy internet users, simply click on this [link](https://pacific-sea-32437.herokuapp.com/).
 
 For those of you who are even MORE saavy, here goes: 
-The BeyHive was deployed online using [Heroku](https://devcenter.heroku.com/start). 
+The BeyHive was deployed online using [Heroku](https://devcenter.heroku.com/start).
+
+Once you arive at the coorrect URL, you will be asked to login or sign up. See below for 
+detailed instructions on how to make the best of The BeyHive!
 
 #When can I use it?? FOR THE LOVE OF GOD WHEN CAN I USE IT
 umm...now!
@@ -51,19 +55,23 @@ We honestly don't have an answer for this.
 Check out some user stories on our [Trello](https://trello.com/b/XgUTcJ9L/beyhive-app)!
 
 #Design
-Login
+Login:
+New users will sign up with their first and last names, an email address, and a password!
 
 ![login page for The BeyHive app](https://i.imgur.com/3iZoDWV.png)
 
-or sign up
+Sign up:
+Returning visitors will use their email address and password to login.
  
 ![sign up page for The BeyHive app](https://i.imgur.com/rh0EY46.png)
 
-Browse posts by video, image, text, or all
+Once you are logged in, scroll through the posts:
+Browse posts by 'video', 'image', 'text', or 'all'....
 
 ![screenshot of the index page of The BeyHive](https://i.imgur.com/0pAOfW9.png)
 
-Create a new post of your choice
+Create a new post of your choice:
+comment, or even post something yourself! 
 
 ![screenshot of the create a post page for The BeyHive](https://i.imgur.com/IYXlnuk.png)
 
