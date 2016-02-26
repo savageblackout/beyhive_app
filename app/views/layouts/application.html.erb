@@ -6,26 +6,36 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <link rel="icon" type="ico" href="file:///Users/claire/Desktop/b.ico">
+  <link rel="icon" type="jpg/png" href="http://www.clker.com/cliparts/P/q/6/5/Z/S/small-bee-th.png">
 </head>
 <body class="container">
   <nav class="navbar navbar-inverse">
-  <% if current_user %>
-    Welcome, <%= current_user.f_name %>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%= link_to 'Logout', session_path('dummy'), method: :delete %>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-  <% else %>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%= link_to 'Login', login_path %>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%= link_to 'Sign Up', new_user_path %>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-  <% end %>
-    <%= link_to "Home", root_path %>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%=link_to "About", about_path %>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <% if current_user %>
+      Welcome, <%= current_user.f_name %>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <%= link_to 'Logout', session_path('dummy'), method: :delete %>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+    <% else %>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <%= link_to 'Login', login_path %>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <%= link_to 'Sign Up', new_user_path %>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+    <% end %>
+      <%= link_to "Home", root_path %>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <%=link_to "About", about_path %>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+        <div class="btn-group">
+          <button type="button" class="btn btn-info dropdown-toggle"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          More Beyonce <span class="caret"></span>
+          </button>
+            <ul class="dropdown-menu">
+              <li><a href="http://www.beyonce.com/">Official Beyonce</a></li>
+              <li><a href="http://thisistheread.com/">The Read</a></li>
+            </ul>
+        </div>
   </nav>
 <%= yield %>
 </body>

@@ -7,11 +7,6 @@ class Post < ActiveRecord::Base
   validates_attachment :photo,
   content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
 
-
-  # def full_name
-  #   self.f_name + ' ' + self.l_name
-  # end
-
   def youtube_link
     "https://youtu.be/#{self.embed_url}"
   end
@@ -42,10 +37,6 @@ class Post < ActiveRecord::Base
 
   def has_video?
     self.embed_url.present?
-  end
-
-  def formatted_time
-    created_at.strftime("%b %-d, %Y")
   end
 
 end
