@@ -1,28 +1,26 @@
-<div class="post" class="container">
+<div class="post container">
   <h4><%= post.title%></h4>
-  <div>
-
-
-  <% if post.has_video? %>
-    <iframe class="video-embed" src="<%= post.embed_link %>" width= "600" height= "450" frameborder="0"
-      allowfullscreen></iframe>
-  <% end %>
-
-  <% if post.has_image? %>
-    <img src="<%= post.photo %>" width="600">
-  <% end %>
-
-  <% if post.has_text? %>
-    <p style= "width: 600"><%= post.text_post %></p>
-  <% end %>
-
-  <div class="comment_box">
-    <h5>Comments:</h5>
-    <% post.comments.each do |comment| %>
-      <p><strong><%= comment.user.full_name %></strong> said:</p>
-      <%= comment.text %>
-      <%= link_to "Delete Comment!", comment_path(comment), method: :delete, class: "btn btn-xs btn-danger", :data => {:confirm => "You Sure?"} %>
+     <% if post.has_video? %>
+      <iframe class="video-embed" src="<%= post.embed_link %>" width= "600" height= "450" frameborder="0"
+        allowfullscreen></iframe>
     <% end %>
-  </div>
 
+    <% if post.has_image? %>
+      <img src="<%= post.photo %>" width="600">
+    <% end %>
+
+    <% if post.has_text? %>
+      <p style= "width: 600"><%= post.text_post %></p>
+    <% end %>
+
+    <div class="comment_box">
+      <h5>Comments:</h5>
+      <% post.comments.each do |comment| %>
+        <p><strong><%= comment.user.full_name %></strong> said:</p>
+        <%= comment.text %>
+        <% if current_user == comment.user %>
+          <%= link_to "Delete Comment!", comment_path(comment), method: :delete, class: "btn btn-xs btn-danger", :data => {:confirm => "You Sure?"} %>
+        <% end %>
+      <% end %>
+    </div>
 </div>

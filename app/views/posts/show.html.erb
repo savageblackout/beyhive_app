@@ -2,6 +2,7 @@
 <%= render "post", post: @post %>
 <%= render "comment" %>
 
+<% if @post.user == current_user %>
 <%= link_to "Edit post!", edit_post_path(@post), :class => "Edit" %>
 &nbsp;&nbsp;|&nbsp;&nbsp;
 <%= link_to "Back to all posts!", posts_path %>
@@ -9,3 +10,4 @@
 <%= link_to "Delete Post!", post_path, data:
 {confirm: "Are you sure you want to delete this post?"}, :method => "Delete" %>
 &nbsp;&nbsp;|&nbsp;&nbsp;
+<% end %>

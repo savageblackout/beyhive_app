@@ -1,33 +1,33 @@
 <div class="container">
   <h1 class="text-center">The BeyHive</h1>
   <div class="row">
-    <div class="col-xs-12" class="img-responsive" class="center-block">
+    <div class="col-xs-12 img-responsive center-block">
     <img id="home_page_imgs" src="https://i.imgur.com/6bd3vSV.jpg">
-      <div class="about_box"><%=link_to "About", about_path,
+      <div class="about_box col-md-2 col-md-offset-5"><%=link_to "About", about_path,
       {class: "btn btn-default"} %>
       </div>
     </div>
-    <div class="col-xs-12" class="img-responsive" class="center-block">
+    <div class="col-xs-12 img-responsive center-block">
     <img id="home_page_imgs" src="https://i.imgur.com/hT9gvh5.jpg">
-      <div class="video_box"><%= link_to "Video", posts_path(video: true),
+      <div class="video_box col-md-2 col-md-offset-5"><%= link_to "Video", posts_path(video: true),
       {class: "btn btn-default"} %>
       </div>
     </div>
-    <div class="col-xs-12" class="img-responsive" class="center-block">
+    <div class="col-xs-12 img-responsive center-block">
     <img id="home_page_imgs" src="https://i.imgur.com/0JCvwzE.jpg">
-      <div class="images_box"><%= link_to "Images", posts_path(photo: true),
+      <div class="images_box col-md-2 col-md-offset-5"><%= link_to "Images", posts_path(photo: true),
       {class: "btn btn-default"} %>
       </div>
     </div>
-    <div class="col-xs-12" class="img-responsive" class="center-block">
-    <img id="home_page_imgs" src="https://i.imgur.com/OJHWAHS.jpg">
-      <div class="text_box"><%= link_to "Text", posts_path(text_posts: true),
+    <div class="col-xs-12 img-responsive center-block">
+    <img id="home_page_imgs" src="https://i.imgur.com/JM3bM1D.jpg">
+      <div class="text_box col-md-2 col-md-offset-5"><%= link_to "Text", posts_path(text_posts: true),
       {class: "btn btn-default"} %>
       </div>
     </div>
-    <div class="col-xs-12" class="img-responsive" class="center-block">
+    <div class="col-xs-12 img-responsive center-block">
     <img id="home_page_imgs" src="https://i.imgur.com/HswBnDc.jpg">
-      <div class="all_box"> <%= link_to "All", posts_path,
+      <div class="all_box col-md-2 col-md-offset-5"> <%= link_to "All", posts_path,
       {class: "btn btn-default"} %>
       </div>
     </div>
