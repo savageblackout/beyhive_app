@@ -4,10 +4,9 @@
   <title>The Beyhive</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
- <%= csrf_meta_tags %>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
- <link rel="icon" type="ico" href="file:///Users/claire/Desktop/b.ico">
-
+  <%= csrf_meta_tags %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="icon" type="ico" href="file:///Users/claire/Desktop/b.ico">
 </head>
 <body class="container">
   <nav class="navbar navbar-inverse">
@@ -27,8 +26,7 @@
     &nbsp;&nbsp;|&nbsp;&nbsp;
     <%=link_to "About", about_path %>
     &nbsp;&nbsp;|&nbsp;&nbsp;
-</nav>
+  </nav>
 <%= yield %>
-
 </body>
 </html>
