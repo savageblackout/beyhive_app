@@ -19,7 +19,9 @@
         <p><strong><%= comment.user.full_name %></strong> said:</p>
         <%= comment.text %>
         <% if current_user == comment.user %>
-          <%= link_to "Delete Comment!", comment_path(comment), method: :delete, class: "btn btn-xs btn-danger", :data => {:confirm => "You Sure?"} %>
+          <%= link_to "Delete Comment!", comment_path(comment),
+          method: :delete, class: "btn btn-xs btn-danger",
+          :data => {:confirm => "You Sure?"} %>
         <% end %>
       <% end %>
     </div>

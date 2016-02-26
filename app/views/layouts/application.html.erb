@@ -10,7 +10,7 @@
 
 </head>
 <body class="container">
-<p class="login_signup_links">
+  <nav class="navbar navbar-inverse">
   <% if current_user %>
     Welcome, <%= current_user.f_name %>
     &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -27,7 +27,7 @@
     &nbsp;&nbsp;|&nbsp;&nbsp;
     <%=link_to "About", about_path %>
     &nbsp;&nbsp;|&nbsp;&nbsp;
-</p>
+</nav>
 <%= yield %>
 
 </body>

@@ -20,21 +20,7 @@ h1 {
   opacity: 0.4;
   filter: alpha(opacity=40);
 }
-.about_box {
 
-}
-.video_box {
-
-}
-.images_box {
-
-}
-.text_box {
-
-}
-.all_box{
-
-}
 .add_comment {
   max-width: 500px;
 }
@@ -42,6 +28,10 @@ h1 {
   opacity: 0.4;
   filter: alpha(opacity=40);
   background-image: cover;
+}
+.container {
+  height: 700px;
+  max-height: 100%;
 }
 .post {
   display: inline-block;
@@ -52,28 +42,25 @@ h1 {
   opacity: 0.4;
   filter: alpha(opacity=40);
 }
+#login_signup_links {
+
+}
+#login_container {
+  position: relative;
+  bottom: 45rem;
+}
 #text_box {
   height: 28rem;
   width: 35rem;
 }
 #sign_up_container {
   position: relative;
-  bottom:60rem;
+  top:-60rem;
 }
 #sign_up_image {
   background-image: cover;
   opacity: 0.4;
   filter: alpha(opacity=40);
-}
-#login_container {
-  position: relative;
-  bottom: 45rem;
-}
-.container {
-
-}
-#login_signup_links {
-
 }
 
 .center-block {
@@ -91,4 +78,3 @@ h1 {
   position: relative;
   right: 45px;
 }
-
