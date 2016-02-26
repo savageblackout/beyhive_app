@@ -12,14 +12,18 @@
     <% if post.has_text? %>
       <p style= "width: 600"><%= post.text_post %></p>
     <% end %>
-
+    <% if current_user %>
+      <div class="new_post">
+        <%= link_to "Create a new post!", new_post_path %>
+      </div>
+      <% end %>
     <div class="comment_box">
       <h5>Comments:</h5>
       <% post.comments.each do |comment| %>
         <p><strong><%= comment.user.full_name %></strong> said:</p>
         <%= comment.text %>
         <% if current_user == comment.user %>
-          <%= link_to "Delete Comment!", comment_path(comment),
+          <%= link_to "x", comment_path(comment),
           method: :delete, class: "btn btn-xs btn-danger",
           :data => {:confirm => "You Sure?"} %>
         <% end %>
