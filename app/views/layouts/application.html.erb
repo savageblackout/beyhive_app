@@ -14,26 +14,21 @@
   <nav class="navbar navbar-inverse">
     <ul class="nav nav-pills">
         <% if current_user %>
-          <li>Welcome, <%= current_user.f_name %></li>
-          <!-- &nbsp;&nbsp;|&nbsp;&nbsp; -->
+          <li class="welcome">Welcome, <%= current_user.f_name %></li>
           <li><%= link_to 'Logout', session_path('dummy'), method: :delete %></li>
-          <!-- &nbsp;&nbsp;|&nbsp;&nbsp; -->
         <% else %>
-          <!-- &nbsp;&nbsp;|&nbsp;&nbsp; -->
           <li><%= link_to 'Login', login_path %></li>
-          <!-- &nbsp;&nbsp;|&nbsp;&nbsp; -->
-          <li><%= link_to 'Sign Up', new_user_path %></li>
-          <!-- &nbsp;&nbsp;|&nbsp;&nbsp; -->
+          <li id="signup_link"><%= link_to "Sign Up", new_user_path %></li>
         <% end %>
           <li><%= link_to "Home", root_path %></li>
-          <!-- &nbsp;&nbsp;|&nbsp;&nbsp; -->
           <li><%=link_to "About", about_path %></li>
-          <!-- &nbsp;&nbsp;|&nbsp;&nbsp; -->
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Beyonce <b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" target="_blank">More Beyonce <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li class="dropdown"><a href="http://www.beyonce.com/">Official Beyonce</a></li>
-              <li class="dropdown"><a href="http://thisistheread.com/">The Read</a></li>
+              <li class="dropdown"><a href="http://www.beyonce.com/" target="_blank">Official Beyonce</a></li>
+              <li class="dropdown"><a href="http://www.beyonce.com/tour/" target="_blank">Beyonce Tour</a></li>
+              <li class="dropdown"><a href="http://shop.beyonce.com/" target="_blank">Shop Beyonce</a></li>
+              <li class="dropdown"><a href="http://thisistheread.com/" target="_blank">The Read</a></li>
             </ul>
           </li>
       </ul>

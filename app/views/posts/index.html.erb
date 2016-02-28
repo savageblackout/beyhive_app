@@ -1,22 +1,22 @@
 <div class="row text-center" class="container">
   <div class="post_container" class="container">
     <h1 class="text-center">Posts</h1>
-    <% @posts.order("created_at desc").each do |post| %>
-      <%= render "post", post: post %>
-      <div class="post_links">
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <%= link_to "Show post", post_path(post), :class => "Show" %>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <% if current_user == post.user %>
-          <%= link_to "Edit post", edit_post_path(post), :class => "Edit" %>
-          &nbsp;&nbsp;|&nbsp;&nbsp;
+      <div class="new_post">
+        <% if current_user %>
+          <%= link_to "Create a new post!", new_post_path, {class: "btn btn-primary"}%>
         <% end %>
       </div>
-    <% end %>
-      <% if current_user %>
-      <div class="new_post">
-        <%= link_to "Create a new post!", new_post_path %>
-      </div>
+      <% @posts.order("created_at desc").each do |post| %>
+        <%= render "post", post: post %>
+        <div class="post_links">
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <%= link_to "Show post", post_path(post), :class => "Show" %>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <% if current_user == post.user %>
+            <%= link_to "Edit post", edit_post_path(post), :class => "Edit" %>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+          <% end %>
+        </div>
       <% end %>
   </div>
 </div>

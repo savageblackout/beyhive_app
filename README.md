@@ -49,9 +49,10 @@ We honestly don't have an answer for this.
 - ImageMagick is a gem that uses its magic to upload and store images, along with [Paperclip](https://github.com/thoughtbot/paperclip/wiki)
 - [Amazon S3](https://aws.amazon.com/s3/?sc_channel=PS&sc_campaign=acquisition_US&sc_publisher=google&sc_medium=s3_b&sc_content=s3_e_control&sc_detail=amazon%20s3&sc_category=s3&sc_segment=85675223922&sc_matchtype=e&sc_country=US&s_kwcid=AL!4422!3!85675223922!e!!g!!amazon%20s3&ef_id=VSKL2AAAAd:20160226084153:s) helps keep our media safely stored in a cloud, and [dotenv](https://github.com/bkeepers/dotenv) keeps our access keys very secret so we arent being taken advantage of by bad people on the internet.
 - Ruby on Rails is the language/frame of choice for the heavy lifting
-- CSS & HTML make things look structured and beautiful
+- CSS, [Bootstrap](http://getbootstrap.com/css/#grid) & HTML make things look structured and beautiful
+- [Hover effect](http://miketricking.github.io/dist/) was provided by [Mike Young](https://github.com/miketricking/miketricking.github.io)
 
-#USER STORY ALERT USER STORY ALERT USER STORY ALERT USER STORY ALERT
+#USER STORY ALERT USER STORY ALERT USER STORY ALERT USER STORY ALERT USER STORY ALERT
 Check out some user stories on our [Trello](https://trello.com/b/XgUTcJ9L/beyhive-app)!
 
 #Design
