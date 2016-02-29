@@ -51,6 +51,7 @@ We honestly don't have an answer for this.
 - Ruby on Rails is the language/frame of choice for the heavy lifting
 - CSS, [Bootstrap](http://getbootstrap.com/css/#grid) & HTML make things look structured and beautiful
 - [Hover effect](http://miketricking.github.io/dist/) was provided by [Mike Young](https://github.com/miketricking/miketricking.github.io)
+- Youtube links were tested with and are presented with a regular expression (regex) editor called [Rubular](http://rubular.com/)
 
 #USER STORY ALERT USER STORY ALERT USER STORY ALERT USER STORY ALERT USER STORY ALERT
 Check out some user stories on our [Trello](https://trello.com/b/XgUTcJ9L/beyhive-app)!
