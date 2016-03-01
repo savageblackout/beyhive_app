@@ -1,11 +1,6 @@
 <div class="container-fluid">
   <h1 class="text-center home_header">The BeyHive</h1>
   <div class="row">
-    <!-- <div class="col-xs-12 img-responsive center-block img-circle">
-      <%#= link_to posts_path(video: true) do %>
-      <%#= image_tag "https://i.imgur.com/hT9gvh5.jpg" %>
-      <#% end %>
-    </div> -->
     <div class="col-xs-12 center-block">
       <div class="hovereffect">
         <img id="home_page_imgs" class="img-responsive" src="https://i.imgur.com/sDqVq8B.jpg" alt="">
@@ -33,6 +28,15 @@
         </div>
       </div>
     </div>
+    <div class="col-xs-12 center-block">
+      <div class="hovereffect">
+        <img class="img-responsive" src="https://i.imgur.com/F9rTKEA.jpg" alt="">
+        <div class="overlay">
+           <h2>All</h2>
+           <a class="info" <% link_to "All", posts_path%><%= link_to "All", posts_path %></a>
+        </div>
+      </div>
+    </div>
      <div class="col-xs-12 center-block">
       <div class="hovereffect">
         <img class="img-responsive" src="https://i.imgur.com/DDIQTVR.jpg" alt="">
@@ -42,3 +46,5 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
