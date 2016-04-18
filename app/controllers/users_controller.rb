@@ -19,4 +19,17 @@ private
   def user_params
     params.require(:user).permit(:f_name, :l_name, :email, :password, :password_confirmation)
   end
+
+  def authorize_modify_content
+    if (current_user != User.find(params[:id])) && !current_user.is_admin
+      redirect_to root_path
+    end
+  end
+
+  def authorize_users_view
+    if !current_user.is_admin
+      redirect_to root_path
+    end
+  end
+
 end
