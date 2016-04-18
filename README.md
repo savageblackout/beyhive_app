@@ -60,30 +60,32 @@ Check out some user stories on our [Trello](https://trello.com/b/XgUTcJ9L/beyhiv
 Login:
 New users will sign up with their first and last names, an email address, and a password!
 
-![login page for The BeyHive app](https://i.imgur.com/3iZoDWV.png)
+![login page for The BeyHive app](https://i.imgur.com/z2squGz.png)
 
 Sign up:
 Returning visitors will use their email address and password to login.
  
-![sign up page for The BeyHive app](https://i.imgur.com/rh0EY46.png)
+![sign up page for The BeyHive app](https://i.imgur.com/Hf3ElUm.png)
 
 Once you are logged in, scroll through the posts:
 Browse posts by 'video', 'image', 'text', or 'all'....
 
-![screenshot of the index page of The BeyHive](https://i.imgur.com/0pAOfW9.png)
+![screenshot of the index page of The BeyHive](https://i.imgur.com/pGsfqra.png)
 
 Create a new post of your choice:
 comment, or even post something yourself! 
 
-![screenshot of the create a post page for The BeyHive](https://i.imgur.com/IYXlnuk.png)
+![screenshot of the create a post page for The BeyHive](https://i.imgur.com/zyhCBh2.png)
 
 Enjoy the fruits of your labor!
 
-![screenshot of Beyonce's Who Run the World? music video](https://i.imgur.com/Us7WU9Y.png)
+![screenshot of Beyonce's Lemonade HBO trailer video](https://i.imgur.com/fU9kY9A.png)
 
 Or you could add a comment, delete, or edit the post you made
 
-![screenshot of the add comments box on The BeyHive](https://i.imgur.com/1B1jWvx.png)
+![screenshot of the add comments box on The BeyHive](https://i.imgur.com/SuAM59j.png)  
+![screenshot of the edit page for a post on The BeyHive](https://i.imgur.com/xepekxm.png)
+
 #Future developments
 
 The BeyHive 2.0 will have some cool new features!
