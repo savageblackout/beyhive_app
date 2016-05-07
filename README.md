@@ -12,7 +12,7 @@
 
 #Who would be interested in such an application?
 We would answer your question with a question: 'who _wouldn't_ be interested in such an application? Young, old, Jew, gentile, black, white, brown, many genders...we all have a deep love and appreciation for Beyonce. With our soon-to-be deployed admin filter, all posts will be screened by a responsible and law-abiding adult, so no youngsters will be exposed to inappropriate posts! 
-![no Riff Raff please. for the love of god.](http://i.imgur.com/KQJfWez.png)
+
 
 #What is it?
 
